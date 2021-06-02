@@ -4,16 +4,16 @@ import {
     Switch,
     Route
 } from "react-router-dom";
-import { LoginScreen } from '../components/LoginScreen';
-import { RegisterScreen } from '../components/RegisterScreen';
+import { JournalScreen } from '../components/JournalScreen';
+import { AuthRouter } from './AuthRouter';
 
 export const AppRouter = () => {
     return (
     <Router>
         <div>
             <Switch>
-                <Route path="/login" component={ LoginScreen } />
-                <Route path="/register" component={ RegisterScreen } />
+                <Route path="/auth" component={ AuthRouter } />
+                <Route exact path="/" component={ JournalScreen } />
             </Switch>
         </div>
     </Router>
