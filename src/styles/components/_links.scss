@@ -1,4 +1,3 @@
-
 .link {
     color: $dark-grey;
     text-decoration: none;
@@ -6,4 +5,12 @@
     &:hover {
         text-decoration: underline;
     }
+}
+.div-link {
+    text-align: center;
+}
+
+.link-button-register {
+    text-align: center;
+    margin-top: 16px;
 }
