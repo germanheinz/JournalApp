@@ -1,3 +1,12 @@
-html, body{
-    background-color: rgb(255, 255, 255);
-}
+@import './base/base';
+@import './base/settings';
+@import './components/auth';
+
+
+// Components
+@import './components/auth';
+@import './components/buttons';
+@import './components/links';
+@import './components/journal';
+@import './components/nothing';
+@import './components/notes';
