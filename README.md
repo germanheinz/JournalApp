@@ -50,3 +50,12 @@ export const useForm = ( initialState = {} ) => {
 
 
 5 - Creating the action
+
+6 - https://console.firebase.google.com/ - console - create project - email & google
+
+7 - npm install firebase
+
+8 - Como las tareas para las peticiones a Google no son sincronas, se debe crear un Midleware
+Para crear una accion asincrona -> https://www.npmjs.com/package/redux-thunk
+npm install --save redux-thunk
+
