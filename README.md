@@ -59,3 +59,5 @@ export const useForm = ( initialState = {} ) => {
 Para crear una accion asincrona -> https://www.npmjs.com/package/redux-thunk
 npm install --save redux-thunk
 
+
+9 - I had problems with firebase store npm i firebase@8.6.3 --save-exact

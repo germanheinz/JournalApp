@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import { useForm } from '../hooks/useForm';
 import { useDispatch } from 'react-redux';
-import { login, loginEmailPassword } from '../actions/authAction';
+import { loginEmailPassword, loginWithGoogle } from '../actions/authAction';
 
 
 export const LoginScreen = () => {
@@ -19,6 +19,10 @@ export const LoginScreen = () => {
     const handleOnSubmit = (e) => {
         e.preventDefault();
         dispatch( loginEmailPassword(123457, 'Germán') )
+    }
+
+    const handleGoogleOnSubmit = () => {
+        dispatch(loginWithGoogle())
     }
 
     return (
@@ -59,6 +63,7 @@ export const LoginScreen = () => {
                     {/* <p>Login with social networks</p> */}
 
                     <div 
+                        onClick={ handleGoogleOnSubmit }
                         className="google-btn"
                     >
                         <div className="google-icon-wrapper">
