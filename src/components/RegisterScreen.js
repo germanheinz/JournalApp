@@ -1,11 +1,16 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import validator from 'validator';
+import { removeError, setError } from '../actions/uiAction';
 import { useForm } from '../hooks/useForm';
 
-
-
 export const RegisterScreen = () => {
+
+    const dispatch = useDispatch();
+    const { msgError } = useSelector( state => state.ui);
+
+    console.log(msgError);
 
     const [ formValues, handleInputChange ] = useForm({
         name: 'german@gmail.com',
@@ -17,8 +22,11 @@ export const RegisterScreen = () => {
     const { name, email, password, password2 } = formValues;
     
     const handleRegister = (e) => {
+
         e.preventDefault();
+
         console.log(formValues);
+
         if(isFormValid()){
 
         }
@@ -27,15 +35,16 @@ export const RegisterScreen = () => {
     const isFormValid = () => {
 
         if( name.trim().length === 0 ){
-            console.log("Name is required");
+            dispatch( setError('Name is required'));
             return false;
         } else if (!validator.isEmail(email)){
-            console.log("Email is not valid");
+            dispatch( setError('Email is not valid') );
             return false;
         } else if ( password !== password2 || password.length < 5 ){
-            console.log("Password is not valid");
+            dispatch( setError('Password is not valid') );
             return false;
         }
+        dispatch( removeError() );
         return true;
     }
 
@@ -82,7 +91,15 @@ export const RegisterScreen = () => {
                     value= { password2 }
                     onChange= { handleInputChange }
                 />
+                {
+                    msgError && 
+                    (
+                        <p className="pError">
+                            { msgError }
+                        </p>
 
+                    )
+                }
 
                 <button
                     type="submit"
