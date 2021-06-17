@@ -61,3 +61,6 @@ npm install --save redux-thunk
 
 
 9 - I had problems with firebase store npm i firebase@8.6.3 --save-exact
+
+
+10 - Form Validators - https://www.npmjs.com/package/validator
