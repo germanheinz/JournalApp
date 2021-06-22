@@ -68,3 +68,8 @@ npm install --save redux-thunk
 
 11 - Implemento el loading en Redux, se usa el useSelector para obtener del state algun valor en
 particular, en este caso necesitabamos el loading para deshabilitar o no el boton
+
+12 - Agrego un effect para que siempre pregunte si hay un usuario
+
+13 - Agrego useState para validar si hay un user y que espere para cargar todo
+esto servirá para redirigir al usuario y proteger las rutas
