@@ -64,3 +64,7 @@ npm install --save redux-thunk
 
 
 10 - Form Validators - https://www.npmjs.com/package/validator
+
+
+11 - Implemento el loading en Redux, se usa el useSelector para obtener del state algun valor en
+particular, en este caso necesitabamos el loading para deshabilitar o no el boton
