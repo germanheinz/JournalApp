@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
-import { logout } from '../actions/authAction';
+import { logout, startLogOut } from '../actions/authAction';
 
 export const JournalScreen = () => {
 
@@ -8,7 +8,7 @@ export const JournalScreen = () => {
 
     const handleLogOut = () => {
         console.log("log out");
-        dispatch(logout());
+        dispatch(startLogOut());
     }
 
     return (
