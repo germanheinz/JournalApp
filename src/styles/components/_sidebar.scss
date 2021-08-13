@@ -1,0 +1,12 @@
+aside{
+    background-color: red;
+    height: auto;
+    width: auto;
+    text-align: center;
+}
+::-webkit-scrollbar-corner {
+    background-color: black;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+} 

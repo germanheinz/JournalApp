@@ -2,9 +2,9 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import validator from 'validator';
-import { registerWithEmailPassword } from '../actions/authAction';
-import { removeError, setError } from '../actions/uiAction';
-import { useForm } from '../hooks/useForm';
+import { registerWithEmailPassword } from '../../actions/authAction';
+import { removeError, setError } from '../../actions/uiAction';
+import { useForm } from '../../hooks/useForm';
 
 export const RegisterScreen = () => {
 
@@ -14,8 +14,8 @@ export const RegisterScreen = () => {
     console.log(msgError);
 
     const [ formValues, handleInputChange ] = useForm({
-        name: 'german@gmail.com',
-        email: 'test@tes.com',
+        name: 'heinz.german@gmail.com',
+        email: 'test@test.com',
         password: '123456',
         password2: '123456'
     });

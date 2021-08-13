@@ -11,7 +11,7 @@ import { firebase } from '../firebase/firebase-config'
 import { AuthRouter } from './AuthRouter';
 import { PrivateRoute } from './PrivateRoute';
 
-import { JournalScreen } from '../components/JournalScreen';
+import { JournalScreen } from '../components/journal/JournalScreen';
 import { login } from '../actions/authAction';
 import { PublicRoute } from './PublicRoute';
 
