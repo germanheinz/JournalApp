@@ -1,3 +1,4 @@
+
 export const types = {
 
     login:  '[Auth] Login',
@@ -9,6 +10,7 @@ export const types = {
     uiStartLoading:  '[UI] Start Loading',
     uiFinishLoading: '[UI] Finish Loading',
 
-    noteActive: '[NOTE] Note Active'
+    noteActive: '[NOTE] Note Active',
+    setNotes: '[NOTE] Set Notes'
 
 }
