@@ -1,5 +1,4 @@
 import React from 'react';
-import { JournalEntries } from './JournalEntries';
 import { Sidebar } from './Sidebar';
 import { NoteScreen } from '../notes/NoteScreen';
 import { useSelector } from 'react-redux';
