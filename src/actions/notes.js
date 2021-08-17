@@ -1,4 +1,3 @@
-import React from 'react'
 import { db } from '../firebase/firebase-config';
 import { loadNotes } from '../helpers/loadNotes';
 import { types } from '../types/types';
@@ -24,11 +23,11 @@ export const startNewNote = () => {
 
     
 }
-export const activeNotes = (id, note) => ({
+export const activeNotes = (id, notes) => ({
     type: types.noteActive,
     payload: {
         id,
-        ...note
+        ...notes
     }
 
 
@@ -38,7 +37,6 @@ export const startLoadingNotes = ( uid ) => {
     return async(dispatch) => {
         const notes = await loadNotes( uid );
         dispatch( setNotes(notes) );
-        console.log(notes);
     }
 }
 

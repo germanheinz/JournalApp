@@ -1,7 +1,7 @@
 import { types } from "../types/types"
 
 const initialState = {
-    note:[],
+    notes:[],
     active: null
 }
 
@@ -16,10 +16,10 @@ export const notesReducer = (state = initialState, action) => {
                     ...action.payload 
                 }
             }
-        case types.loadNotes:
+        case types.setNotes:
             return{
                 ...state,
-                note: [ ...action.payload ]
+                notes: [ ...action.payload ]
             }
     default:
         return state

@@ -73,3 +73,7 @@ particular, en este caso necesitabamos el loading para deshabilitar o no el boto
 
 13 - Agrego useState para validar si hay un user y que espere para cargar todo
 esto servirá para redirigir al usuario y proteger las rutas
+
+14- moment.js es la libreria que se utiliza para manejar fechas
+https://momentjs.com/
+npm install moment --save
