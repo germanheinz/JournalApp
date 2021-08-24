@@ -5,7 +5,7 @@ import { startSaveNote, startUploading } from '../../actions/notes';
 export const NotesAppBar = () => {
 
     const dispatch   = useDispatch();
-    const { active } = useSelector( state => state.notes );
+    const { notes:active } = useSelector( state => state.notes );
     console.log(active);
     
     const save = () => {

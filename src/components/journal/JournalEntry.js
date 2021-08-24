@@ -17,7 +17,8 @@ export const JournalEntry = ({id, date, title, body, url}) => {
         const note = {
             title,
             body,
-            noteDate
+            noteDate,
+            url
         }
     
         dispatch( activeNotes(id, note) );
