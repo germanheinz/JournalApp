@@ -2,6 +2,7 @@ import { db } from '../firebase/firebase-config';
 import { loadNotes } from '../helpers/loadNotes';
 import { types } from '../types/types';
 import Swal from 'sweetalert2';
+import { fileUpload } from '../helpers/fileUpload';
 
 export const startNewNote = () => {
 
@@ -77,4 +78,18 @@ export const refreshNote = (id, note) => ({
     }
     
 });
+
+// Accion para imagenes, como es una tarea asincrona uso el return de esta maneta
+export const startUploading = ( file ) => {
+   
+    return async (dispatch, getState) => {
+        
+        const { active:activeNote } = getState().notes;
+        
+        const fileUrl = await fileUpload( file );
+
+        console.log(fileUrl);
+    }
+
+}
 

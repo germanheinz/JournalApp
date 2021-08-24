@@ -15,3 +15,4 @@ export const types = {
     noteUpdated:'[NOTE] Update Notes'
 
 }
+//Journal-React
