@@ -1,17 +1,39 @@
-import React from 'react'
-import { useSelector } from 'react-redux';
+import React, { useEffect, useRef } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 import { NotesAppBar } from './NotesAppBar';
 
 import { useForm } from '../../hooks/useForm';
+import { activeNotes } from '../../actions/notes';
 
 export const NoteScreen = () => {
 
-    const { active:note } = useSelector( state => state.notes );
-    console.log( note );
+    const dispatch = useDispatch();
 
-    const { values, handleInputChange } = useForm( note );
-    console.log( values);
+    const { active:note } = useSelector( state => state.notes );
+
+    const [values, handleInputChange, reset ] = useForm( note );
+
     const { body, title } = values;
+
+    const activeId = useRef( note.id );
+
+    useEffect(() => {
+
+      if( note.id !== activeId.current ){
+
+        reset( note );
+        activeId.current = note.id
+
+      }
+    }, [ note, reset ])
+
+    useEffect(() => {
+
+        dispatch( activeNotes(values.id, { ...values }) );
+
+        console.log(values);
+        
+    }, [ values ]);
 
     return (
         <div className="notes__main-content">
@@ -27,6 +49,7 @@ export const NoteScreen = () => {
                     autoComplete="off"
                     value={ body }
                     onChange={ handleInputChange }
+                    name="body"
                 />
 
                 <textarea
@@ -34,6 +57,7 @@ export const NoteScreen = () => {
                     className="notes__textarea"
                     value={ title }
                     onChange={ handleInputChange }
+                    name="title"
                 ></textarea>
                 {
                     (note.url)

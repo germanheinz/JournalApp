@@ -11,6 +11,7 @@ export const types = {
     uiFinishLoading: '[UI] Finish Loading',
 
     noteActive: '[NOTE] Note Active',
-    setNotes: '[NOTE] Set Notes'
+    setNotes:   '[NOTE] Set Notes',
+    noteUpdated:'[NOTE] Update Notes'
 
 }
