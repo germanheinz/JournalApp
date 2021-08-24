@@ -12,7 +12,8 @@ export const types = {
 
     noteActive: '[NOTE] Note Active',
     setNotes:   '[NOTE] Set Notes',
-    noteUpdated:'[NOTE] Update Notes'
+    noteUpdated:'[NOTE] Update Notes',
+    noteDelete:'[NOTE] Delete Notes'
 
 }
 //Journal-React
