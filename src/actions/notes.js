@@ -123,3 +123,7 @@ export const deleteNote = (id) => ({
     type: types.noteDelete,
     payload: id
 })
+
+export const noteLogout = () => ({
+    type: types.noteLogout
+});
